@@ -1,6 +1,6 @@
 function split(number) {
-  var digits =  number.toString().split('');
-  return digits.map(function(digit) {
+  var digits = number.toString().split('');
+  return digits.map(function (digit) {
     return parseInt(digit);
   })
 }
@@ -19,7 +19,7 @@ var dictionary = {
 };
 
 function getPatterns(digits, dictionary) {
-  return digits.map(function(digit) {
+  return digits.map(function (digit) {
     return dictionary[digit];
   })
 }
@@ -29,7 +29,7 @@ function concat(patterns) {
   var secondLine = '';
   var thirdLine = '';
 
-  patterns.forEach(function(pattern) {
+  patterns.forEach(function (pattern) {
     firstLine += pattern[0] + ' ';
     secondLine += pattern[1] + ' ';
     thirdLine += pattern[2] + ' ';
@@ -37,10 +37,27 @@ function concat(patterns) {
 
   firstLine = firstLine.slice(0, -1);
   secondLine = secondLine.slice(0, -1);
-  thirdLine = thirdLine.slice(0 ,-1);
+  thirdLine = thirdLine.slice(0, -1);
 
-  console.log([firstLine,secondLine,thirdLine])
-  return [firstLine,secondLine,thirdLine];
+  return [firstLine, secondLine, thirdLine];
+}
+
+function display(patternsInOrder) {
+  var text = '';
+  patternsInOrder.forEach(function (patternInOrder) {
+    text += patternInOrder;
+    text += '\n';
+  })
+
+  console.log(text);
+  return text;
+}
+
+function lcd(number) {
+  var digits = split(number);
+  var patterns = getPatterns(digits, dictionary);
+  var patternsInOrder = concat(patterns);
+  display(patternsInOrder);
 }
 
 
