@@ -23,3 +23,22 @@ function getPatterns(digits, dictionary) {
     return dictionary[digit];
   })
 }
+
+function concat(patterns) {
+  var firstLine = '';
+  var secondLine = '';
+  var thirdLine = '';
+
+  patterns.forEach(function(pattern) {
+    firstLine += pattern[0] + ' ';
+    secondLine += pattern[1] + ' ';
+    thirdLine += pattern[2] + ' ';
+  })
+
+  firstLine = firstLine.slice(0, -1);
+  secondLine = secondLine.slice(0, -1);
+  thirdLine = thirdLine.slice(0 ,-1);
+
+  return [firstLine,secondLine,thirdLine];
+}
+
