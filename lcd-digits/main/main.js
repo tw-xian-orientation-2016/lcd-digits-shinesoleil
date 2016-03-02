@@ -33,7 +33,7 @@ function concat(patterns) {
     firstLine += pattern[0] + ' ';
     secondLine += pattern[1] + ' ';
     thirdLine += pattern[2] + ' ';
-  })
+  });
 
   firstLine = firstLine.slice(0, -1);
   secondLine = secondLine.slice(0, -1);
@@ -47,7 +47,7 @@ function display(patternsInOrder) {
   patternsInOrder.forEach(function (patternInOrder) {
     text += patternInOrder;
     text += '\n';
-  })
+  });
 
   console.log(text);
   return text;
@@ -57,7 +57,7 @@ function lcd(number) {
   var digits = split(number);
   var patterns = getPatterns(digits, dictionary);
   var patternsInOrder = concat(patterns);
-  display(patternsInOrder);
+  return display(patternsInOrder);
 }
 
 

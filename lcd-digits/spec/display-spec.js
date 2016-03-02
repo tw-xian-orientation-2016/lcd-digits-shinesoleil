@@ -4,7 +4,7 @@ describe('display the text', function () {
 
   var text = '... ._.\n' +
     '..| |.|\n' +
-    '..| |_|';
+    '..| |_|\n';
 
   it('should display the LCD patterns', function () {
     expect(display(patternsInOrder)).toEqual(text);
