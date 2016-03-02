@@ -39,6 +39,8 @@ function concat(patterns) {
   secondLine = secondLine.slice(0, -1);
   thirdLine = thirdLine.slice(0 ,-1);
 
+  console.log([firstLine,secondLine,thirdLine])
   return [firstLine,secondLine,thirdLine];
 }
+
 
