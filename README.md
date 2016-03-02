@@ -16,3 +16,15 @@ Example: 910
 |_| ..| |.|
 ..| ..| |_|
 ```
+
+
+TASK1: split             16:07 - 16:16      9 min
+
+
+TASK2: getPatterns       16:17 - 16:30      13 min
+
+
+TASK3: concat            16:31 - 16:46      15 min
+
+
+TASK4: display           16:47 - 17:06      19 min
