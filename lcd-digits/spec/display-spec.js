@@ -6,7 +6,12 @@ describe('display the text', function () {
     '..| |.|\n' +
     '..| |_|\n';
 
+  beforeEach(function() {
+    spyOn(console, 'log');
+  });
+
   it('should display the LCD patterns', function () {
-    expect(display(patternsInOrder)).toEqual(text);
+    display(patternsInOrder);
+    expect(console.log).toHaveBeenCalledWith(text);
   })
 });

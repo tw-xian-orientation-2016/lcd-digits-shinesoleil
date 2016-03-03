@@ -42,10 +42,10 @@ function concat(patterns) {
   return [firstLine, secondLine, thirdLine];
 }
 
-function display(patternsInOrder) {
+function display(orderedPatterns) {
   var text = '';
-  patternsInOrder.forEach(function (patternInOrder) {
-    text += patternInOrder;
+  orderedPatterns.forEach(function (orderedPattern) {
+    text += orderedPattern;
     text += '\n';
   });
 
